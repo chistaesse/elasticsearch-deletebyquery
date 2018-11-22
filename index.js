@@ -1,7 +1,7 @@
 'use strict';
 
 var ca = require('elasticsearch/src/lib/client_action').makeFactoryWithModifier(function (spec) {
-  return require('elasticsearch/src/lib/utils').merge(spec, {
+  return require('lodash').merge(spec, {
     params: {
       filterPath: {
         type: 'list',
